@@ -1,0 +1,5 @@
+RPG Game Development notes:
+
+
+1. I was going to implement the interactable system next. I wanted the player controller interact with things on a left click rather than a right click, which is why I instantiated a boolean on the player controller
+https://www.youtube.com/watch?v=9tePzyL6dgc&list=PLPV2KyIb3jR4KLGCCAciWQ5qHudKtYeP7&index=3
