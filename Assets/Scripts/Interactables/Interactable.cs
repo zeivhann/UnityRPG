@@ -56,6 +56,9 @@ public class Interactable : MonoBehaviour {
     // Draw gizmo when object is selected in editor
     void OnDrawGizmosSelected()
     {
+        // Set transform if we don't already have one
+        if (interactionTransform == null) interactionTransform = this.transform;
+        
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(this.interactionTransform.position, radius);
     }

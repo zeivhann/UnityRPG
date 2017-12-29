@@ -1,5 +1,17 @@
 RPG Game Development notes:
+General Notes that I wanted to make to keep things on track.
 
 
-1. I was going to implement the interactable system next. I wanted the player controller interact with things on a left click rather than a right click, which is why I instantiated a boolean on the player controller
-https://www.youtube.com/watch?v=9tePzyL6dgc&list=PLPV2KyIb3jR4KLGCCAciWQ5qHudKtYeP7&index=3
+============= Aspects of Gameplay/ Hierarchies =============
+I. Interactables - This is the class that every interactable object in the game inherits from. This will include doors, chests, items, NPCs, etc. Interactions are completed using left-click.
+
+II. Items - These are objects that can go into your inventory and they will all inherit from the base Item class. The Item class is based on Unity's ScriptableObject class which enables you to create objects that don't need to be attached to game objects.
+[Documentation for ScriptableObject here: https://docs.unity3d.com/ScriptReference/ScriptableObject.html]
+	- Create an Item by right-clicking -> Create -> Inventory -> Item. From here, in the inspector the name, sprite in inventory and other item attributes can be set.
+
+III. Navigation - Navigation is done by using a NavMeshRenderer that's built into Unity. The player can walk around to various points on the map and interact with objects by left-clicking.
+
+
+============= Other Scripts =============
+1. Float - When put on a game object, floats up and down based on a given offset. Values can be set in editor.
+2. CameraController - This script controls the camera. Allows for zooming in and out and panning around in a circle around the player.
