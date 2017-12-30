@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: Shield of Blocking Stuff
   m_EditorClassIdentifier: 
   name: Shield of Blocking Stuff
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: bb8339ac6ae5df34e85fb9884eaed6c6, type: 3}
   isStartingItem: 0

@@ -13,6 +13,11 @@ III. Navigation - Navigation is done by using a NavMeshRenderer that's built int
 
 IV. Inventory - The inventory is handled as its own class with a member variable list. This list contains the items in the inventory and how many items can be held in the inventory. It works by being attached to a GameManger in the scene. The class uses a singleton to call itself and act as a global variable so we don't have to find InstanceOf inventory. This ensures that we have a consistent inventory, and that we can always find it.
 [Documentation for Singletons: http://wiki.unity3d.com/index.php/Singleton]
+	- The inventory is actually kept track of by the GameManager object which holds the list and the list is accessed globablly and affected by lower parts of the hierarchy, typically through interactions with the inventory UI.
+	- The Inventory UI is created by drawing on a pane that uses a grid system and a prefab. The icons are selected and enabled based on looping through the list. If the item is in the list, the UI uses its attributes to draw it onto the pane, otherwise the UI simply empties the contents of the rest of the slots. In its current state, the bag is static and has a specific number of slots.
+	- The Inventory class holds the attributes of the inventory itself and notifies when the inventory has been altered in some way. This class also holds the actual list of inventory items.
+	- The InventoryUI class puts the items in the UI using a loop and sets the keybindings for showing and hiding the inventory. (The bag is initially hidden by disabling it in the Unity editor).
+	- The InventorySlot class holds the attributes and functions of each inventory slot itself--adding and removing items, as well as using items and the given attributes of the item, such as its sprite and name.
 
 
 ============= Other Scripts =============

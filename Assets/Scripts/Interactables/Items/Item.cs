@@ -15,4 +15,13 @@ public class Item : ScriptableObject {
 
     // sets if item is a starting item
     public bool isStartingItem = false;
+
+
+    // Each item will have its own uses so this is virtual; to be overridden.
+    public virtual void Use()
+    {
+        // Use item
+
+        Debug.Log("Using " + this.name);
+    }
 }
