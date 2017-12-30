@@ -36,7 +36,7 @@ public class InventorySlot : MonoBehaviour {
         Inventory.instance.Remove(item);
     }
 
-    // Use item
+    // Use item or bring up inventory context menu
     public void UseItem ()
     {
         if (this.item != null)

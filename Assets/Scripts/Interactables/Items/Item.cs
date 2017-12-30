@@ -21,7 +21,8 @@ public class Item : ScriptableObject {
     public virtual void Use()
     {
         // Use item
-
+        // We want to open context menu when item is clicked in the inventory
         Debug.Log("Using " + this.name);
+        Debug.Log("Open context menu for inventory");
     }
 }

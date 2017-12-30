@@ -9,8 +9,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b6c4e79b6fb5fab4a8e956338bbedefa, type: 3}
-  m_Name: Helm of Protection
+  m_Name: Sapphire of Floatiness
   m_EditorClassIdentifier: 
-  name: Helm of Protection
-  icon: {fileID: 21300000, guid: 8fa7bee218fee5a4389a32299f67cd96, type: 3}
+  name: Sapphire of Floatiness
+  icon: {fileID: 21300000, guid: e7d29a79bc7fae248887c8a08a160303, type: 3}
   isStartingItem: 0

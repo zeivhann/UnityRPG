@@ -23,3 +23,11 @@ IV. Inventory - The inventory is handled as its own class with a member variable
 ============= Other Scripts =============
 1. Float - When put on a game object, floats up and down based on a given offset. Values can be set in editor.
 2. CameraController - This script controls the camera. Allows for zooming in and out and panning around in a circle around the player.
+
+
+
+
+NOTE: Currently the context menu classes are placeholders for implementation later
+Right now I'm trying to implement a context menu on left click in the inventory.
+
+-> Maybe use a universal context menu handler (HandleContextMenu attached to GameManager like the inventory?) and call it in the Use function in Item class; the context menu would come from here based on the item's status.
