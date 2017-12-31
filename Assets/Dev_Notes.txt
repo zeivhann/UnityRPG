@@ -19,6 +19,10 @@ IV. Inventory - The inventory is handled as its own class with a member variable
 	- The InventoryUI class puts the items in the UI using a loop and sets the keybindings for showing and hiding the inventory. (The bag is initially hidden by disabling it in the Unity editor).
 	- The InventorySlot class holds the attributes and functions of each inventory slot itself--adding and removing items, as well as using items and the given attributes of the item, such as its sprite and name.
 
+V. Equipment - The equipment is handled by the EquipmentManager script on the GameManager in the scene
+	- Equipment uses an Enumerator to keep track of which slots each piece of equipment belongs to.
+	- Equipment inherits from Item.
+	- The EquipmentManager holds an array of Enums that holds each item to be equipped; when something is already equipped in the slot it swaps out and goes back into the inventory
 
 ============= Other Scripts =============
 1. Float - When put on a game object, floats up and down based on a given offset. Values can be set in editor.

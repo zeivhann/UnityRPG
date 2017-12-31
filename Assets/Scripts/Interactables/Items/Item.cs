@@ -25,4 +25,10 @@ public class Item : ScriptableObject {
         Debug.Log("Using " + this.name);
         Debug.Log("Open context menu for inventory");
     }
+
+    // Remove current item from inventory instance
+    public void RemoveFromInventory ()
+    {
+        Inventory.instance.Remove(this);
+    }
 }

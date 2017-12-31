@@ -8,9 +8,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6c4e79b6fb5fab4a8e956338bbedefa, type: 3}
-  m_Name: Helm of Skullsafery
+  m_Script: {fileID: 11500000, guid: b0f81ad7f0f4dea4a92981a069d533c7, type: 3}
+  m_Name: Helmet of Skullsafery
   m_EditorClassIdentifier: 
   name: Helm of Skullsafery
   icon: {fileID: 21300000, guid: fd6e4fc32c78509458fc45ea4a478ba8, type: 3}
   isStartingItem: 0
+  equipSlot: 0
+  armorModifier: 3
+  damageModifier: 0
