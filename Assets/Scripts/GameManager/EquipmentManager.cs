@@ -15,7 +15,11 @@ public class EquipmentManager : MonoBehaviour {
 
     #endregion
 
-    Equipment[] currentEquipment;
+    // Holds the mesh for the player body so we can reference it
+    public SkinnedMeshRenderer targetMesh;
+
+    Equipment[] currentEquipment; // Items that are currently equipped
+    SkinnedMeshRenderer[] meshes; // Meshes of currently equipped items
 
     // Notify when it items have been equipped or unequipped
     public delegate void OnEquipmentChanged(Equipment newItem, Equipment oldItem);
@@ -30,6 +34,7 @@ public class EquipmentManager : MonoBehaviour {
         this.inventory = Inventory.instance;
         int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
         currentEquipment = new Equipment[numSlots];
+        meshes = new SkinnedMeshRenderer[numSlots];
     }
 
     // Equip item
@@ -54,6 +59,17 @@ public class EquipmentManager : MonoBehaviour {
 
         // Put the new item into the currentEquipment array
         currentEquipment[slotIndex] = newItem;
+
+        // Add the new item mesh to the player
+        SkinnedMeshRenderer newMesh = Instantiate<SkinnedMeshRenderer>(newItem.mesh);
+        newMesh.transform.parent = targetMesh.transform;
+
+        // Tell mesh how to deform to character body
+        newMesh.bones = targetMesh.bones;
+        newMesh.rootBone = targetMesh.rootBone;
+
+        // Add the new mesh to the current mesh array
+        meshes[slotIndex] = newMesh;
     }
 
     // Unequip an item
@@ -61,6 +77,12 @@ public class EquipmentManager : MonoBehaviour {
     {
         if (currentEquipment[slotIndex] != null)
         {
+            // Delete the game object mesh off of the player
+            if (meshes[slotIndex] != null)
+            {
+                Destroy(meshes[slotIndex].gameObject);
+            }
+
             Equipment oldItem = currentEquipment[slotIndex];
             inventory.Add(oldItem);
 

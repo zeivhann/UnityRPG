@@ -9,4 +9,3 @@ A few free Asset packages are used in this project.
 
 RPG Inventory Icons: https://assetstore.unity.com/packages/2d/gui/icons/rpg-inventory-icons-56687
 Low Poly Free Pack: https://assetstore.unity.com/packages/3d/environments/low-poly-free-pack-63714
-Midieval Toon character: https://assetstore.unity.com/packages/3d/characters/medieval-toon-character-19641
