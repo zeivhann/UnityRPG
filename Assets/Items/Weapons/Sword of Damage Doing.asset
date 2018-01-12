@@ -9,11 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0f81ad7f0f4dea4a92981a069d533c7, type: 3}
-  m_Name: Belt of Not Sagging
+  m_Name: Sword of Damage Doing
   m_EditorClassIdentifier: 
-  name: Belt of Not Sagging
-  icon: {fileID: 21300000, guid: da09804303305f542a686824630e7269, type: 3}
+  name: Sword of Damage Doing
+  icon: {fileID: 21300000, guid: 5fd50594014b70e48bd6993443d46b32, type: 3}
   isStartingItem: 0
-  equipSlot: 4
-  armorModifier: 1
-  damageModifier: 0
+  equipSlot: 5
+  mesh: {fileID: 0}
+  coveredMeshRegions: 
+  armorModifier: 0
+  damageModifier: 2

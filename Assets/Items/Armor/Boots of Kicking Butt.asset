@@ -9,11 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0f81ad7f0f4dea4a92981a069d533c7, type: 3}
-  m_Name: Shield of Blocking Stuff
+  m_Name: Boots of Kicking Butt
   m_EditorClassIdentifier: 
-  name: Shield of Blocking Stuff
-  icon: {fileID: 21300000, guid: b97c91e8b348f3f4ebdc11f5c82182cd, type: 3}
+  name: Boots of kicking butt
+  icon: {fileID: 21300000, guid: e420c5bc93cb2604695a893500c897e3, type: 3}
   isStartingItem: 0
-  equipSlot: 6
-  armorModifier: 8
+  equipSlot: 7
+  mesh: {fileID: 0}
+  coveredMeshRegions: 
+  armorModifier: 2
   damageModifier: 0

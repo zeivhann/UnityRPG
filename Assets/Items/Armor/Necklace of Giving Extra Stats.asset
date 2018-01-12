@@ -9,11 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0f81ad7f0f4dea4a92981a069d533c7, type: 3}
-  m_Name: Sword of Damage Doing
+  m_Name: Necklace of Giving Extra Stats
   m_EditorClassIdentifier: 
-  name: Sword of Damage Doing
-  icon: {fileID: 21300000, guid: 5fd50594014b70e48bd6993443d46b32, type: 3}
+  name: Necklace of Giving Extra Stats
+  icon: {fileID: 21300000, guid: 0e123cfdc54a3ca4684816a34167a566, type: 3}
   isStartingItem: 0
-  equipSlot: 5
+  equipSlot: 1
+  mesh: {fileID: 0}
+  coveredMeshRegions: 
   armorModifier: 0
-  damageModifier: 2
+  damageModifier: 0

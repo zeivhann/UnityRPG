@@ -25,6 +25,11 @@ V. Equipment - The equipment is handled by the EquipmentManager script on the Ga
 	- The EquipmentManager holds an array of Enums that holds each item to be equipped; when something is already equipped in the slot it swaps out and goes back into the inventory
 	- The meshes for the equipped items are similarly handled in an Enum that holds the location of where each piece of equipment belongs. Each equippable item is assigned both the Equip Slot (determed in equipped array) and Covered Mesh Regions (Which tells where the armor is covering on the player).
 
+VI. Stats - Stats determine the effectiveness of items and bonuses given by weapons and armor.
+	- Every stat inherits from the Stat class which is its own standalone class. Stat has a base value which can be assigned in the inspector but when equipment has been added or removed, is affected by said equipment. This class has a list that holds the modifier values that increase or decrease the stat.
+	- CharacterStats applies to all characters and is intended to extend to other objects that need stats. Every character has a certain amount of max health which can be reduced to zero, in which case the character dies. This class contains functions that allow the character to take damage.
+	- PlayerStats inherits from CharacterStats and applies to the player character and handles the stats of the player. This class is where, when equipment has been changed, the modifiers are added or removed. This will then change the amount of damage the character takes, etc.
+
 
 ============= Other Scripts =============
 1. Float - When put on a game object, floats up and down based on a given offset. Values can be set in editor.
@@ -33,6 +38,14 @@ V. Equipment - The equipment is handled by the EquipmentManager script on the Ga
 
 
 
+============= TODOs and Other Things =============
+TODO: Reorganize asset hierarchy logically
+TODO: Add Context Menus
+TODO: Create more custom meshes?
+TODO: Add Interactive objects (i.e. open chest to get item)
+TODO: Remove ability to move when left-clicking in the inventory window
+TODO: Make inventory canvas movable
+TODO: Open "Character/Equipment/Stats" window when player presses "C"
 
 NOTE: Currently the context menu classes are placeholders for implementation later
 Right now I'm trying to implement a context menu on left click in the inventory.
