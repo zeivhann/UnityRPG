@@ -11,7 +11,7 @@ public class Float : MonoBehaviour {
 
     // Sets speed for float
     [SerializeField]
-    private float floatSpeed = 0.01f;
+    private float floatSpeed = 0.5f;
 
     // Set the offset for floating up and down
     [SerializeField]
@@ -24,26 +24,29 @@ public class Float : MonoBehaviour {
     // Holds direction
     private bool isGoingUp = true;
 
-    void Start ()
+
+    void Awake ()
     {
-        positionY = this.transform.position.y;
-        maxHeight = positionY + offset;
-        minHeight = positionY - offset;
+        // Set positions
+        this.positionY = this.transform.position.y;
+        this.maxHeight = positionY + offset;
+        this.minHeight = positionY - offset;
     }
 
 	void Update () {
-        if (this.positionY <= maxHeight && isGoingUp)
+        // If position is less than the maxheight and it's currenlty going up, continue to go up
+        if (this.positionY < (maxHeight) && isGoingUp)
         {
-            this.SetTransformY(positionY += floatSpeed);
+            this.SetTransformY(positionY += floatSpeed * Time.deltaTime);
         }
         else if (this.positionY <= minHeight)
         {
-            isGoingUp = true;
+            this.isGoingUp = true;
         }
         else
         {
-            isGoingUp = false;
-            this.SetTransformY(positionY -= floatSpeed);
+            this.isGoingUp = false;
+            this.SetTransformY(positionY -= floatSpeed * Time.deltaTime);
         }
 	}
 

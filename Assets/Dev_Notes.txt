@@ -30,6 +30,10 @@ VI. Stats - Stats determine the effectiveness of items and bonuses given by weap
 	- CharacterStats applies to all characters and is intended to extend to other objects that need stats. Every character has a certain amount of max health which can be reduced to zero, in which case the character dies. This class contains functions that allow the character to take damage.
 	- PlayerStats inherits from CharacterStats and applies to the player character and handles the stats of the player. This class is where, when equipment has been changed, the modifiers are added or removed. This will then change the amount of damage the character takes, etc.
 
+VII. Enemies - Enemies are controlled by the EnemyController class. Radius specifies aggro range of the enemy.
+
+VIII. Combat - 
+
 
 ============= Other Scripts =============
 1. Float - When put on a game object, floats up and down based on a given offset. Values can be set in editor.
@@ -46,6 +50,8 @@ TODO: Add Interactive objects (i.e. open chest to get item)
 TODO: Remove ability to move when left-clicking in the inventory window
 TODO: Make inventory canvas movable
 TODO: Open "Character/Equipment/Stats" window when player presses "C"
+TODO: Add more stats and create alogorithms to make them do different things for the player
+TODO: Create start screen
 
 NOTE: Currently the context menu classes are placeholders for implementation later
 Right now I'm trying to implement a context menu on left click in the inventory.
