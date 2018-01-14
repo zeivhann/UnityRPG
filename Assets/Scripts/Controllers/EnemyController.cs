@@ -11,6 +11,9 @@ public class EnemyController : MonoBehaviour {
     Transform target;
     NavMeshAgent agent;
 
+    // Combat stats for this enemy
+    CharacterCombat combat;
+
 	// Use this for initialization
 	void Start () {
         // Get Player position
@@ -18,6 +21,9 @@ public class EnemyController : MonoBehaviour {
 
         // Get NavMeshAgent
 		this.agent = GetComponent<NavMeshAgent>();
+
+        // Get combat stats for this enemy
+        this.combat = GetComponent<CharacterCombat>();
 	}
 	
 	void Update () {
@@ -31,7 +37,10 @@ public class EnemyController : MonoBehaviour {
 
             if (distance <= this.agent.stoppingDistance)
             {
-                // Attack the target
+                CharacterStats targetStats = this.target.GetComponent<CharacterStats>();
+
+                // Attack the target's stats
+                if (targetStats != null) this.combat.Attack(targetStats);
 
                 // Face the target
                 FaceTarget();

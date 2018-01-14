@@ -2,8 +2,9 @@ RPG Game Development notes:
 General Notes that I wanted to make to keep things on track.
 
 
-============= Aspects of Gameplay/ Hierarchies =============
+============= Aspects of Gameplay / Hierarchies =============
 I. Interactables - This is the class that every interactable object in the game inherits from. This will include doors, chests, items, NPCs, etc. Interactions are completed using left-click.
+	- Enemies are inherited from this class because combat relies heavily on player interaction.
 
 II. Items - These are objects that can go into your inventory and they will all inherit from the base Item class. The Item class is based on Unity's ScriptableObject class which enables you to create objects that don't need to be attached to game objects.
 [Documentation for ScriptableObject: https://docs.unity3d.com/ScriptReference/ScriptableObject.html]
@@ -31,8 +32,9 @@ VI. Stats - Stats determine the effectiveness of items and bonuses given by weap
 	- PlayerStats inherits from CharacterStats and applies to the player character and handles the stats of the player. This class is where, when equipment has been changed, the modifiers are added or removed. This will then change the amount of damage the character takes, etc.
 
 VII. Enemies - Enemies are controlled by the EnemyController class. Radius specifies aggro range of the enemy.
+	- Every instance of an enemy should use the Enemy class, which has a base class of Interactable. In doing this, it enables the player to interact with the enemies and we can override what happens when the player interacts with it. This is done by overriding the base Interact() class. Here we take into consideration enemy stats.
 
-VIII. Combat - 
+VIII. Combat - Combat is largely based on the CharacterCombat class, which covers all characters including the player and enemies.
 
 
 ============= Other Scripts =============
@@ -51,7 +53,9 @@ TODO: Remove ability to move when left-clicking in the inventory window
 TODO: Make inventory canvas movable
 TODO: Open "Character/Equipment/Stats" window when player presses "C"
 TODO: Add more stats and create alogorithms to make them do different things for the player
-TODO: Create start screen
+TODO: Create start screen and Game over screen
+TODO: Create Pause menu
+TODO: Add dialogue system
 
 NOTE: Currently the context menu classes are placeholders for implementation later
 Right now I'm trying to implement a context menu on left click in the inventory.
