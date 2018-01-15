@@ -29,6 +29,10 @@ public class InventoryUI : MonoBehaviour {
         {
             this.inventoryUI.SetActive(!this.inventoryUI.activeSelf);
         }
+        else if (this.inventoryUI.activeSelf && Input.GetKeyDown(KeyCode.Escape))
+        {
+            this.inventoryUI.SetActive(!this.inventoryUI.activeSelf);
+        }
     }
 	
     // Add or remove items to inventory by looping through each slot

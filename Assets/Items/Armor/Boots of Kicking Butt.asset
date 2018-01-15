@@ -19,3 +19,4 @@ MonoBehaviour:
   coveredMeshRegions: 
   armorModifier: 2
   damageModifier: 0
+  contextMenuOptions: 0000000002000000

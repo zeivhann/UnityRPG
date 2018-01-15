@@ -18,6 +18,16 @@ public class InventorySlot : MonoBehaviour {
         this.icon.sprite = item.icon;
         this.icon.enabled = true;
         this.removeButton.interactable = true;
+
+        /*
+        // If item is Equipment, add Equipment Context Menu
+        if (newItem.GetType() == typeof(Equipment))
+        {
+            this.equipmentMenu = GetComponent<EquipmentContextMenu>();
+        }
+        */
+
+        // TODO: Add types for consumable and interactable
     }
 
     // Remove item from inventory slot
@@ -41,6 +51,7 @@ public class InventorySlot : MonoBehaviour {
     {
         if (this.item != null)
         {
+            // Logic for using item
             this.item.Use();
         }
     }

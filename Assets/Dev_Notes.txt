@@ -36,12 +36,16 @@ VII. Enemies - Enemies are controlled by the EnemyController class. Radius speci
 
 VIII. Combat - Combat is largely based on the CharacterCombat class, which covers all characters including the player and enemies.
 
+IX. Context Menus - Context menus are handled with the HandleContextMenu class.
+	- When items are created, they can be assigned options from the context menu options enumerator. In this way, items can have unique context menu options and can be easily assigned on a per-item basis.
+	- The HandleContextMenu class relies on the Item class to create an empty GameObject to attach its script to, which it then deletes when it is either used or somewhere else on the screen is clicked.
+	- Context menu can be closed by pressing the inventory buttons or escape.
 
 ============= Other Scripts =============
 1. Float - When put on a game object, floats up and down based on a given offset. Values can be set in editor.
 2. CameraController - This script controls the camera. Allows for zooming in and out and panning around in a circle around the player.
 3. ConvertToRegularMesh - This script is something to be put on any mesh so that it can be used in a scene quickly. Just drag a mesh into the editor window, add this component and click the gear icon context menu -> Convert To Regular Mesh. (May have to reset transform)
-
+4. GameManager - Handles pause menu/closing windows (eventually). Sits on the GameManager object. Also holds various constant strings which might need to be accessed in various parts of the game
 
 
 ============= TODOs and Other Things =============
@@ -56,8 +60,3 @@ TODO: Add more stats and create alogorithms to make them do different things for
 TODO: Create start screen and Game over screen
 TODO: Create Pause menu
 TODO: Add dialogue system
-
-NOTE: Currently the context menu classes are placeholders for implementation later
-Right now I'm trying to implement a context menu on left click in the inventory.
-
--> Maybe use a universal context menu handler (HandleContextMenu attached to GameManager like the inventory?) and call it in the Use function in Item class; the context menu would come from here based on the item's status.

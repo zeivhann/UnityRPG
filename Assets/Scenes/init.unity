@@ -412,6 +412,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93f9cee97b3d9cd4fa66a026d2502443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackSpeed: 1
+  attackDelay: 0.6
 --- !u!1 &85576837
 GameObject:
   m_ObjectHideFlags: 0
@@ -5351,6 +5353,7 @@ GameObject:
   - component: {fileID: 1263592229}
   - component: {fileID: 1263592230}
   - component: {fileID: 1263592231}
+  - component: {fileID: 1263592232}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5422,6 +5425,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b377166299061d64e9ca655e688feeb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1263592232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1263592226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7542e085fe6bc9f459eb5178c46757bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1276918966
@@ -8447,6 +8461,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93f9cee97b3d9cd4fa66a026d2502443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackSpeed: 1
+  attackDelay: 0.6
 --- !u!1001 &2069133399
 Prefab:
   m_ObjectHideFlags: 0
