@@ -5,7 +5,7 @@ using UnityEngine;
 
 // This class handles all context menus in the game
 [CreateAssetMenu(fileName = "New Context Menu", menuName = "Context Menu")]
-public class HandleContextMenu : ScriptableObject {
+public class ContextMenuHandler : ScriptableObject {
     // Hold name and description of the object
     public new string name;
     public string description;

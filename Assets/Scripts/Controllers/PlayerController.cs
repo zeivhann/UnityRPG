@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(PlayerMotor))]
 
@@ -26,6 +27,11 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        // Prevent player movement when clicking on UI
+        if (EventSystem.current.IsPointerOverGameObject()) return;
+
+
         // Check if left mouse button is clicked
 		if (Input.GetMouseButtonDown(0))
         {

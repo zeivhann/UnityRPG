@@ -36,9 +36,9 @@ VII. Enemies - Enemies are controlled by the EnemyController class. Radius speci
 
 VIII. Combat - Combat is largely based on the CharacterCombat class, which covers all characters including the player and enemies.
 
-IX. Context Menus - Context menus are handled with the HandleContextMenu class.
+IX. Context Menus - Context menus are handled with the ContextMenuHandler class.
 	- When items are created, they can be assigned options from the context menu options enumerator. In this way, items can have unique context menu options and can be easily assigned on a per-item basis.
-	- The HandleContextMenu class relies on the Item class to create an empty GameObject to attach its script to, which it then deletes when it is either used or somewhere else on the screen is clicked.
+	- The ContextMenuHandler class relies on the Item class to create an empty GameObject to attach its script to, which it then deletes when it is either used or somewhere else on the screen is clicked.
 	- Context menu can be closed by pressing the inventory buttons or escape.
 
 ============= Other Scripts =============

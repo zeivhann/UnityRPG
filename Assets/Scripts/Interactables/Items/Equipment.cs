@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Equipment", menuName = "Inventory/Equipment")]
-[RequireComponent(typeof(HandleContextMenu))]
+[RequireComponent(typeof(ContextMenuHandler))]
 public class Equipment : Item {
     // Define attributes for a piece of equipment
     public EquipmentSlot equipSlot;
